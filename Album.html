@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bouss — Et si j'échoue ??</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="nav"><div class="conteneur"><a class="logo" href="index.html">BOUSS</a><nav aria-label="Navigation principale"><ul><li><a href="index.html">Artiste</a></li><li><a href="album.html" class="actif">Album</a></li><li><a href="tracklist.html">Tracklist</a></li></ul></nav></div></header>
+
+  <main class="conteneur">
+    <section class="hero">
+      <div class="hero-image carre">
+        <img src="images/album.jpg" alt="Pochette de Et si j'échoue ??">
+      </div>
+      <div>
+        <span class="etiquette">Album</span>
+        <h1 class="moyen">Et si j'échoue ??</h1>
+        <p class="auteur">Bouss</p>
+        <div class="pastilles">
+          <span class="pastille">30 mai 2025</span>
+          <span class="pastille">45 titres</span>
+          <span class="pastille">1 h 11</span>
+        </div>
+        <p class="label-info">Label : Le Grand / Level Up Music</p>
+        <div class="boutons">
+          <a id="lien-deezer" class="bouton principal" href="https://www.deezer.com/" target="_blank" rel="noopener">Écouter sur Deezer</a>
+          <a class="bouton secondaire" href="tracklist.html">Voir la tracklist ↓</a>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <span class="etiquette">L'album en chiffres</span>
+      <div class="infos">
+        <div class="info"><small>Date de sortie</small><strong>30 mai 2025</strong></div>
+        <div class="info"><small>Nombre de titres</small><strong>45</strong></div>
+        <div class="info"><small>Durée</small><strong>1 h 11</strong></div>
+        <div class="info"><small>Label</small><strong>Le Grand / Level Up Music</strong></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="annonce">
+        <span class="etiquette">Un nouvel album ?</span>
+        <h3>Aucun nouvel album annoncé à ce jour</h3>
+        <p>Au 27 octobre 2026, aucune date de sortie n'est annoncée. Bouss continue cependant de sortir des singles, dont « Pas de rôle » le 23 octobre 2026.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pied"><div class="conteneur">Source : à compléter · Données au 27 octobre 2026</div></footer>
+  <script src="data.js"></script>
+  <script>
+    document.getElementById("lien-deezer").href = DONNEES.album.deezer;
+  </script>
+</body>
+</html>

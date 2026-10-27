@@ -1,11 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BOUSS - et si j'echoue ??? </title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bouss — Fiche artiste</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+  <header class="nav"><div class="conteneur"><a class="logo" href="index.html">BOUSS</a><nav aria-label="Navigation principale"><ul><li><a href="index.html" class="actif">Artiste</a></li><li><a href="album.html">Album</a></li><li><a href="tracklist.html">Tracklist</a></li></ul></nav></div></header>
+
+  <main class="conteneur">
+    <section class="hero">
+      <div class="hero-image">
+        <img src="images/bouss.jpg" alt="Portrait de Bouss, rappeur français.">
+      </div>
+      <div>
+        <span class="etiquette">Fiche artiste</span>
+        <h1>BOUSS</h1>
+        <p class="sous-titre">De son vrai nom Boussad · Rappeur français</p>
+        <p class="texte">Rappeur français dont l'écriture se distingue par sa directivité et son flow tranchant. Il aborde les thèmes de la force, de la rue et de l'affirmation de soi avec une énergie brute.</p>
+        <div class="boutons">
+          <a class="bouton principal" href="album.html">Voir son dernier album →</a>
+          <a class="bouton secondaire" href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <span class="etiquette">En bref</span>
+      <h2 class="titre-section">Les infos essentielles</h2>
+      <div class="infos">
+        <div class="info"><small>Naissance</small><strong>1er juin 1998 · Colombes</strong></div>
+        <div class="info"><small>Représente</small><strong>Gentilly</strong></div>
+        <div class="info"><small>Débuts</small><strong>2020</strong></div>
+        <div class="info"><small>Label</small><strong>Arachnée Productions</strong></div>
+        <div class="info"><small>Nationalité</small><strong>Française</strong></div>
+      </div>
+    </section>
+
+    <section>
+      <span class="etiquette">Dernier projet</span>
+      <a class="projet" href="album.html">
+           <div class="pochette"><img src="images/album.jpg" alt="Pochette de l’album Et si j’échoue ?? de Bouss."></div>
+        <div>
+          <h3>Et si j'échoue ??</h3>
+          <p>Sorti le 30 mai 2025 · 45 titres · 1 h 11</p>
+          <p>Label : Le Grand / Level Up Music</p>
+        </div>
+      </a>
+    </section>
+
+    <section>
+      <span class="etiquette">Actualité</span>
+      <h2 class="titre-section">Les derniers sons</h2>
+      <div id="singles" class="singles"></div>
+    </section>
+  </main>
+
+  <footer class="pied"><div class="conteneur">Source : à compléter · Données au 27 octobre 2026</div></footer>
+  <script src="data.js"></script>
 </body>
 </html>

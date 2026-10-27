@@ -1,0 +1,249 @@
+:root {
+  --fond: #0a0a0a;
+  --carte: #161618;
+  --bordure: #26262a;
+  --texte: #f4f4f4;
+  --texte-doux: #9a9a9f;
+  --accent: #ff4a1c;
+  --rayon: 12px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: "Inter", system-ui, -apple-system, Arial, sans-serif;
+  background: var(--fond);
+  color: var(--texte);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; text-decoration: none; }
+ul { list-style: none; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+.conteneur {
+  width: min(1040px, 100% - 3rem);
+  margin-inline: auto;
+}
+
+/* ---------- Navigation ---------- */
+.nav { padding: 1.1rem 0; }
+.nav .conteneur {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  font-weight: 800;
+  letter-spacing: .18em;
+  font-size: .75rem;
+}
+.nav ul { display: flex; gap: 1.5rem; }
+.nav a {
+  font-size: .7rem;
+  color: var(--texte-doux);
+  transition: color .2s;
+}
+.nav a:hover { color: var(--texte); }
+.nav a.actif { color: var(--accent); font-weight: 600; }
+
+/* ---------- Textes utilitaires ---------- */
+.etiquette {
+  display: block;
+  color: var(--accent);
+  font-size: .62rem;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  margin-bottom: .5rem;
+}
+.titre-section {
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+}
+section { margin-bottom: 3.5rem; }
+
+/* ---------- Hero ---------- */
+.hero {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 2.5rem;
+  align-items: center;
+  padding: 2.5rem 0 3.5rem;
+  margin-bottom: 0;
+}
+.hero-image {
+  aspect-ratio: 1 / 1.2;
+  background: var(--carte);
+  border: 1px solid var(--bordure);
+  border-radius: var(--rayon);
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  color: #55555a;
+  font-size: .65rem;
+}
+.hero-image img { width: 100%; height: 100%; object-fit: cover; }
+.hero-image.carre { aspect-ratio: 1 / 1; }
+
+.hero h1 {
+  font-size: clamp(3rem, 8vw, 4.5rem);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -.02em;
+  margin-bottom: .75rem;
+}
+.hero h1.moyen { font-size: clamp(2rem, 5vw, 2.6rem); letter-spacing: -.01em; }
+.sous-titre { font-size: .8rem; margin-bottom: .75rem; }
+.hero p.texte {
+  font-size: .72rem;
+  color: var(--texte-doux);
+  max-width: 480px;
+  margin-bottom: 1.25rem;
+}
+.auteur { color: var(--texte-doux); font-size: .85rem; margin-bottom: .75rem; }
+
+.pastilles { display: flex; gap: .5rem; flex-wrap: wrap; margin-bottom: .75rem; }
+.pastille {
+  border: 1px solid var(--bordure);
+  background: var(--carte);
+  border-radius: 999px;
+  padding: .15rem .6rem;
+  font-size: .62rem;
+}
+.label-info { color: var(--texte-doux); font-size: .65rem; margin-bottom: 1.25rem; }
+
+/* ---------- Boutons ---------- */
+.boutons { display: flex; gap: .6rem; flex-wrap: wrap; }
+.bouton {
+  display: inline-block;
+  border-radius: 999px;
+  padding: .45rem 1rem;
+  font-size: .68rem;
+  font-weight: 600;
+  border: 1px solid var(--texte);
+  transition: transform .15s, background .2s;
+}
+.bouton:hover { transform: translateY(-1px); }
+.bouton.principal { background: var(--accent); border-color: var(--accent); color: #fff; }
+.bouton.principal:hover { background: #ff633a; }
+.bouton.secondaire:hover { background: rgba(255,255,255,.08); }
+
+/* ---------- Grilles de cartes d'infos ---------- */
+.infos {
+  display: grid;
+  gap: .6rem;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+.info {
+  background: var(--carte);
+  border-radius: 8px;
+  padding: .8rem .9rem;
+}
+.info small {
+  display: block;
+  color: var(--texte-doux);
+  font-size: .55rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  margin-bottom: .35rem;
+}
+.info strong { font-size: .72rem; font-weight: 600; }
+
+/* ---------- Carte projet ---------- */
+.projet {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  background: var(--carte);
+  border: 1px solid var(--bordure);
+  border-radius: var(--rayon);
+  padding: 1.25rem;
+}
+.pochette {
+  background: #101012;
+  border: 1px solid var(--bordure);
+  border-radius: 8px;
+  display: grid;
+  place-items: center;
+  color: #55555a;
+  font-size: .55rem;
+  overflow: hidden;
+  aspect-ratio: 1;
+}
+.pochette img { width: 100%; height: 100%; object-fit: cover; }
+.projet .pochette { width: 100px; flex-shrink: 0; }
+.projet h3 { font-size: 1.05rem; margin-bottom: .25rem; }
+.projet p { font-size: .62rem; color: var(--texte-doux); }
+
+/* ---------- Boîte d'annonce ---------- */
+.annonce {
+  background: var(--carte);
+  border: 1px solid var(--bordure);
+  border-radius: var(--rayon);
+  padding: 1.25rem 1.5rem;
+}
+.annonce h3 { font-size: .95rem; margin-bottom: .4rem; }
+.annonce p { font-size: .65rem; color: var(--texte-doux); max-width: 640px; }
+
+/* ---------- Singles ---------- */
+.singles {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+}
+.single {
+  background: var(--carte);
+  border: 1px solid var(--bordure);
+  border-radius: var(--rayon);
+  padding: .7rem;
+}
+.single .pochette { width: 100%; margin-bottom: .7rem; }
+.single h3 { font-size: .75rem; }
+.single p { font-size: .55rem; color: var(--texte-doux); }
+
+/* ---------- Tracklist ---------- */
+.entete-page { padding: 2rem 0 1.5rem; margin-bottom: 0; }
+.entete-page h1 { font-size: clamp(1.8rem, 5vw, 2.2rem); font-weight: 800; }
+.entete-page p { color: var(--texte-doux); font-size: .65rem; margin-top: .4rem; }
+
+.tracklist {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 3rem;
+  margin-bottom: 3rem;
+}
+.tracklist ol { list-style: none; }
+.tracklist li {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  padding: .55rem 0;
+  border-bottom: 1px solid var(--bordure);
+  font-size: .7rem;
+  transition: background .2s;
+}
+.tracklist li:hover { background: rgba(255,255,255,.03); }
+.tracklist .num { color: var(--texte-doux); font-size: .6rem; width: 1.3rem; }
+
+/* ---------- Pied de page ---------- */
+.pied {
+  border-top: 1px solid var(--bordure);
+  padding: 1.25rem 0;
+  font-size: .55rem;
+  color: var(--texte-doux);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 760px) {
+  .hero { grid-template-columns: 1fr; }
+  .hero-image { max-width: 280px; }
+  .tracklist { grid-template-columns: 1fr; }
+  .projet { flex-direction: column; align-items: flex-start; }
+  .projet .pochette { width: 100%; max-width: 160px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; }
+}
